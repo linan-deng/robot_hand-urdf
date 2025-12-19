@@ -870,9 +870,9 @@
 
     <!-- connect leaphand to ur5e -->
     <joint name="ur5e_connect_joint" type="fixed">
-        <parent link="wrist_3_link"/>
+        <parent link="ee_link"/>
         <child link="connect_ur5e_leaphand"/>
-        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.112 0.0"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
     </joint>
 
     <link name="connect_ur5e_leaphand">
@@ -899,6 +899,9 @@
     <joint name="connect_leaphand_joint" type="fixed">
         <parent link="connect_ur5e_leaphand"/>
         <child link="palm_lower"/>
-        <origin rpy="1.5708 3.14159265359 0.0" xyz="0.0 0.02 0.0"/>
+        <origin rpy="-1.5707963267948958919 0.0 1.5707963267948958919" xyz="0.04 0.0 0.0"/>
+      <!-- rotate axis z -> y -> x -->
+      <!-- 1.5707963267948958919 -->
+      <!-- 3.14159265359 -->
     </joint>
 </robot>
